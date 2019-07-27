@@ -126,3 +126,6 @@ AUTH_USER_MODEL = 'users.CustomUser'  # creating CustomUser for user model based
 # handles where server redirects to on login/logout
 LOGIN_REDIRECT_URL = 'home'
 LOGOUT_REDIRECT_URL = 'home'
+
+# determines method for sending emails for password reset
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
