@@ -1,0 +1,14 @@
+<!-- templates/update_user_info.html -->
+
+
+{% extends 'base.html' %}
+
+
+{% block content %}
+    <h1>Update your personal information.</h1>
+    <form method="post" action="">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <input type="submit" class="btn btn-success" value="Update My Info">
+    </form>
+{% endblock content %}
