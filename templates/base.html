@@ -1,5 +1,5 @@
 <!-- templates/base.html -->
-
+<!-- Author: Harold Ainsworth, Summer 2019 -->
 <!DOCTYPE html>
 <html>
     <head>
@@ -14,9 +14,10 @@
     <body>
         <main>
             {% load static %}
-            <nav class="navbar navbar-expand-md navbar-dark bg-dark mb-4">
+            <nav class="navbar navbar-expand-md navbar-dark bg-dark sticky-top mb-4">
                 <a class="navbar-brand" href="{% url 'home' %}">
-                    <img src="{% static '/buff.png' %}" alt="buff.png" height="75px">
+                    <img src="{% static '/COLORADO_CLIMBING.png' %}" alt="Colorado Climbing
+                    " height="75px">
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -49,6 +50,13 @@
                 {% block content %}
                 {% endblock content %}
             </div>
+            <footer class="fixed-bottom">
+                <div class="footer-copyright text-center py-3">
+                    <img src="{% static 'buff.png' %}" alt="buff" height="50px" class="center-block">
+                    © 2019 Copyright:
+                    <a href="https://www.cuclimbing.com/"> CU Climbing Team</a>
+                </div>
+            </footer>
             <!-- Optional JavaScript -->
             <!-- jQuery first, then Popper.js, then Bootstrap JS -->
             <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4\YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
