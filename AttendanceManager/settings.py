@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'users.apps.UsersConfig',
     'attendancerecords.apps.AttendancerecordsConfig',
     'competitionrecords.apps.CompetitionrecordsConfig',
+    'fundraisingrecords.apps.FundraisingrecordsConfig',
 ]
 
 MIDDLEWARE = [
