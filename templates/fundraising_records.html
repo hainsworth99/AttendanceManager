@@ -1,17 +1,18 @@
-<!-- templates/attendance_records.html -->
+<!-- templates/fundraising_records.html -->
 
 
 {% extends 'base.html' %}
 
 
 {% block content %}
-    <h2>Attendance Records for {{ user.first_name }} {{ user.last_name}}</h2>
+    <h2>Fundraising Records for {{ user.first_name }} {{ user.last_name}}</h2>
     </br>
     {% for record in object_list %}
         {% if user.student_id == record.student_id %}
             <div class="card">
                 <div class="card-header">
-                    <h3>{{ record.date }}</h3>
+                    <h3>{{ record.name }}</h3>
+                    <p class="text-muted">{{ record.date }}</p>
                 </div>
             </div>
             </br>
