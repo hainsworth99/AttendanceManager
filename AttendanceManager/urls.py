@@ -19,13 +19,14 @@ from django.views.generic.base import TemplateView
 from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('users/', include('users.urls')),
-    path('users/', include('django.contrib.auth.urls')),
-    path('', TemplateView.as_view(template_name='home.html'), name='home'),
-    path('records/', include('records.urls')),
-    path('api/', include('api.urls')),
-    path('api-auth/', include('rest_framework.urls')),
+    path('admin/', admin.site.urls),  # urls for admin portal
+    path('users/', include('users.urls')),  # urls for users app
+    path('users/', include('django.contrib.auth.urls')),  # urls for django user auth
+    path('', TemplateView.as_view(template_name='home.html'), name='home'),  # homepage url
+    path('records/', include('records.urls')),  # urls for records app
+    path('api/', include('api.urls')),  # urls for api app
+    path('api-auth/', include('rest_framework.urls')),  # urls for browsable api auth
+    path('api/rest-auth/', include('rest_auth.urls')),  # urls for api auth endpoints 
 ]
 
 

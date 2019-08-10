@@ -39,7 +39,9 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
     # third party apps
-    'rest_framework',
+    'rest_framework',  # main for api rest framework
+    'rest_framework.authtoken',  # allows additional user auth functionality through api
+    'rest_auth',
 
     # local apps
     'users.apps.UsersConfig',
@@ -50,8 +52,12 @@ INSTALLED_APPS = [
 
 REST_FRAMEWORK = {
     'DEFAULT_PERMISSION_CLASSES': [
-        'rest_framework.permissions.IsAuthenticated',
-    ]
+        'rest_framework.permissions.IsAuthenticated',  # sets project-wide api permissions default to require user auth
+    ],
+    'DEFAULT_AUTHENTICATION_CLASSES': [
+            'rest_framework.authentication.SessionAuthentication',  # enables browsable api
+            'rest_framework.authentication.TokenAuthentication',  # enables token auth. for external api use
+    ],
 }
 
 
