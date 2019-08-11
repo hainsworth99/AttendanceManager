@@ -55,7 +55,7 @@ REST_FRAMEWORK = {
         'rest_framework.permissions.IsAuthenticated',  # sets project-wide api permissions default to require user auth
     ],
     'DEFAULT_AUTHENTICATION_CLASSES': [
-            'rest_framework.authentication.SessionAuthentication',  # enables browsable api
+            #'rest_framework.authentication.SessionAuthentication',  # enables browsable api
             'rest_framework.authentication.TokenAuthentication',  # enables token auth. for external api use
     ],
 }
