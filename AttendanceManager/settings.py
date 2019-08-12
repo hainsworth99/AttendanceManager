@@ -95,10 +95,16 @@ WSGI_APPLICATION = 'AttendanceManager.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/2.0/ref/settings/#databases
 
+# using postgresql database on localhost
+# database login info stored in environment variables 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': os.environ.get('ATTENDANCE_MANAGER_DB_NAME'),
+        'USER': os.environ.get('ATTENDANCE_MANAGER_DB_USER'),
+        'PASSWORD': os.environ.get('ATTENDANCE_MANAGER_DB_PASSWORD'),
+        'HOST': 'localhost',
+        'PORT': '',
     }
 }
 
