@@ -6,15 +6,19 @@
 
 {% block content %}
     <h2>Attendance Records for {{ user.first_name }} {{ user.last_name}}</h2>
+    <h4 class="text-muted">{{ user_attendance_num }}/{{ total_dates}} practices - {{ attendance_percentage }}%</h4>
     </br>
-    {% for record in object_list %}
-        {% if user.student_id == record.student_id %}
-            <div class="card">
-                <div class="card-header">
-                    <h3>{{ record.date }}</h3>
-                </div>
+    {% for record in user_attendance_list %}
+        <div class="card">
+            <div class="card-header">
+                <h3>{{ record.date }}</h3>
+                {% if record.attended %}
+                    <p class="text-success">Attended</p>
+                {% else %}
+                    <p class="text-danger">Not Attended</p>
+                {% endif %}
             </div>
-            </br>
-        {% endif %}
+        </div>
+        </br>
     {% endfor %}
 {% endblock content %}
