@@ -63,8 +63,44 @@ class CompetitionRecordsListView(LoginRequiredMixin, ListView):
     model = CompetitionRecord
     template_name = 'competition_records.html'
 
+    def get_user(self):
+        return self.request.user
+
+    def get_context_data(self, **kwargs):
+        context = super(CompetitionRecordsListView, self).get_context_data(**kwargs)
+
+        # get user and user records
+        user = self.get_user()
+        user_records = []
+        for record in context['object_list']:
+            if record.student_id == user.student_id:
+                user_records.append(record)
+
+        context['user_competition_list'] = user_records
+        context['user_competition_number'] = len(user_records)
+
+        return context
+
 
 class FundraisingRecordsListView(LoginRequiredMixin, ListView):
 
     model = FundraisingRecord
     template_name = 'fundraising_records.html'
+
+    def get_user(self):
+        return self.request.user
+
+    def get_context_data(self, **kwargs):
+        context = super(FundraisingRecordsListView, self).get_context_data(**kwargs)
+
+        # get user and user records
+        user = self.get_user()
+        user_records = []
+        for record in context['object_list']:
+            if record.student_id == user.student_id:
+                user_records.append(record)
+
+        context['user_fundraising_list'] = user_records
+        context['user_fundraising_number'] = len(user_records)
+
+        return context
