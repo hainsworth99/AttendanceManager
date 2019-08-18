@@ -47,6 +47,7 @@ INSTALLED_APPS = [
     'users.apps.UsersConfig',
     'records.apps.RecordsConfig',
     'api.apps.ApiConfig',
+    'announcements.apps.AnnouncementsConfig',
 ]
 
 

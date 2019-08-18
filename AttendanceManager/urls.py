@@ -22,7 +22,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),  # urls for admin portal
     path('users/', include('users.urls')),  # urls for users app
     path('users/', include('django.contrib.auth.urls')),  # urls for django user auth
-    path('', TemplateView.as_view(template_name='home.html'), name='home'),  # homepage url
+    path('', include('announcements.urls')),  # homepage url
     path('records/', include('records.urls')),  # urls for records app
     path('api/', include('api.urls')),  # urls for api app
     path('api-auth/', include('rest_framework.urls')),  # urls for browsable api auth

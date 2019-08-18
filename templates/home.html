@@ -18,6 +18,17 @@
                 <a href="{% url 'logout'%}" class="card-link" style="padding: 10px">Log Out</a>
             </div>
         </div>
+        {% for announcement in object_list %}
+            </br>
+            <div class="card">
+                <div class="card-header">
+                    <h5 class="card-title">{{ announcement.title }}</h5>
+                </div>
+                <div class="card-body">
+                    <p class="text-muted">{{ announcement.body }}</p>
+                </div>
+            </div>
+        {% endfor %}
     {% else %}
         <meta http-equiv="REFRESH" content="0;url={% url 'login' %}">
     {% endif %}
