@@ -1,4 +1,4 @@
-#AttendanceManager
+# AttendanceManager
 The aim of this project is to provide a centralized online 
 resource for members of the CU Climbing Team to keep track 
 of their attendance, competition, and fundraising requirements. 
