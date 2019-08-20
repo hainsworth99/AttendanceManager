@@ -1,23 +1,36 @@
-#AttendanceManager
+# AttendanceManager
 The aim of this project is to provide a centralized online 
 resource for members of the CU Climbing Team to keep track 
 of their attendance, competition, and fundraising requirements. 
-It also serves as a platform for the team's leadership to post
-important announcements. 
+Users of this system will swipe their student IDs in a card reader 
+to register their attendance through a http request to a Django-based 
+REST API. Users may log in to their accounts via the provided Django
+web app to manage their accounts, view their team records, and receive
+important information posted by the team captains. Admin users can create
+user records and post announcements on the team's homepage. 
 
-### Built With
+#### Built With
 * [Django](https://www.djangoproject.com/) - A high-level python web framework.
 * [Django Rest Framework](https://www.django-rest-framework.org/) - A third-party Django toolkit for building REST APIs.
 * [PostgreSQL](https://www.postgresql.org/) - An open-source relational database management system.
 * [Bootstrap](https://getbootstrap.com/) - An open-source CSS framework. 
 * [RaspberryPi](https://www.raspberrypi.org/) - A single-board computer running Linux, used for modular embedded systems projects.
 
-### Hosted Using
+#### Hosted Using
 * [Amazon Web Services EC2](https://aws.amazon.com/ec2/) - A web service providing secure, scalable cloud computing.
 * [Gunicorn](https://gunicorn.org/) - A python wsgi HTTP server.
 * [Nginx](https://www.nginx.com/) - A reverse proxy server. 
 
-### Deployment to Ubuntu EC2 Instance
+#### Hardware Used
+* [Raspberry Pi Zero W](https://www.sparkfun.com/products/14277) - Raspberry Pi's smallest model with full wifi and bluetooth functionality.
+* [Basic 16x2 LCD Screen](https://www.sparkfun.com/products/255) - A simple text screen to display usage prompts and information.
+* [MagTek MSR100 Card Reader](https://www.amazon.com/POSUNITECH-Magnetic-Collector-MSR100-information/dp/B06XSHLYC2/ref=sr_1_fkmr0_2?keywords=MagTek+MSR100&qid=1566332460&s=gateway&sr=8-2-fkmr0) - A magnetic card reader.
+
+
+## Embedded Systems Setup 
+TODO
+
+## Deployment to Ubuntu EC2 Instance
 Create an Ubuntu EC2 instance in the [EC2 Console](https://aws.amazon.com/console/),  adding a security rule enabling access to SSH and HTTP ports from all hosts.
 Then log into the instance as user ubuntu. For more info about logging into an EC2 instance, click the "connect" tab in the console and follow the instructions.
 
@@ -182,10 +195,10 @@ Make sure to replace the values in `server_name` with the ip and domain values o
     $ sudo ufw allow 'Nginx Full'
 The application should be up and running on the ip address or domain name associated with the server. Test it out by visiting the ip or domain in a web browser.
 
-### Authors
+## Authors
 * __Harold Ainsworth__ - _initial work_
 
-### Acknowledgements
+## Acknowledgements
 * [Initial Server Setup](https://www.digitalocean.com/community/tutorials/initial-server-setup-with-ubuntu-18-04) - by Justin Ellingwood
 * [How to Setup Django with Postgres, Nginx, and Gunicorn](https://www.digitalocean.com/community/tutorials/how-to-set-up-django-with-postgres-nginx-and-gunicorn-on-ubuntu-18-04) - by Justin Ellingwood
 * [Django for APIs](https://djangoforapis.com/) - by William S. Vincent
