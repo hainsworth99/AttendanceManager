@@ -27,6 +27,7 @@ user records and post announcements on the team's homepage.
 * [MagTek MSR100 Card Reader](https://www.amazon.com/POSUNITECH-Magnetic-Collector-MSR100-information/dp/B06XSHLYC2/ref=sr_1_fkmr0_2?keywords=MagTek+MSR100&qid=1566332460&s=gateway&sr=8-2-fkmr0) - A magnetic card reader.
 
 ![homepage screenshot](/static/homepage.png)
+
 ![attendance page screenshot](/static/attendance.png)
 
 ## Embedded Systems Setup 
