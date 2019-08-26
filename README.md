@@ -30,6 +30,9 @@ user records and post announcements on the team's homepage.
 
 ![attendance page screenshot](/static/attendance.png)
 
+## Scripts
+* `sign_in.py` - Run as a systemd service on the raspberry pi in order to parse user card-swipe data and send as HTTP request to API endpoint.
+* `create_training_groups.py` - Run as a weekly cron job to randomly create new training groups for the week. 
 ## Embedded Systems Setup 
 TODO
 
