@@ -21,6 +21,7 @@
                 </a>
                 {% if user.is_authenticated %}
                     <h5><a class="nav-link text-light" href="{% url 'attendance_records' %}">Attendance</a></h5>
+                    <h5><a class="nav-link text-light" href="{% url 'training_groups' %}">Training Groups</a></h5>
                     <h5><a class="nav-link text-light" href="{% url 'competition_records' %}">Competitions</a></h5>
                     <h5><a class="nav-link text-light" href="{% url 'fundraising_records' %}">Fundraising</a></h5>
                 {% endif %}

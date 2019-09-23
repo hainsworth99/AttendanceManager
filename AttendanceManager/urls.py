@@ -26,7 +26,8 @@ urlpatterns = [
     path('records/', include('records.urls')),  # urls for records app
     path('api/', include('api.urls')),  # urls for api app
     path('api-auth/', include('rest_framework.urls')),  # urls for browsable api auth
-    path('api/rest-auth/', include('rest_auth.urls')),  # urls for api auth endpoints 
+    path('api/rest-auth/', include('rest_auth.urls')),  # urls for api auth endpoints
+    path('training_groups/', include('traininggroups.urls'))
 ]
 
 

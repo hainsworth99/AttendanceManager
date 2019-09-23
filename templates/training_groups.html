@@ -1,0 +1,25 @@
+<!-- templates/training_groups.html -->
+
+
+{% extends 'base.html' %}
+
+
+{% block content %}
+    <h2>Training Groups</h2>
+    </br>
+    {% for group in object_list %}
+        <div class="card">
+            <div class="card-header">
+                <h3>{{ group.name }}</h3>
+            </div>
+            <div class="card-body">
+                <ul>
+                    {% for person in group.group_members %}
+                        <p>{{ person }}</p>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+        </br>
+    {% endfor %}
+{% endblock content %}
