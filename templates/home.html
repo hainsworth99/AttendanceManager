@@ -9,7 +9,11 @@
         <div class="card">
             <div class="card-body">
                 <h3 class="card-title">{{ user.first_name }} {{ user.last_name }}</h3>
-                <h6 class="card-subtitle mb-2 text-muted">{{ user.username }} | {{ user.email }} | {{ user.student_id }}</h6>
+                {% if user.training_group != Null %}
+                    <h6 class="card-subtitle mb-2 text-muted">{{ user.username }} | {{ user.email }} | {{ user.student_id }} | strength group: {{ user.training_group }}</h6>
+                {% else %}
+                    <h6 class="card-subtitle mb-2 text-muted">{{ user.username }} | {{ user.email }} | {{ user.student_id }} | strength group: none assigned</h6>
+                {% endif %}
                 <p class="card-text"></p>
             </div>
             <div class="card-footer">
